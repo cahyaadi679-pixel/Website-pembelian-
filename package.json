@@ -1,0 +1,14 @@
+{
+  "name": "web-hirrofficial",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Web HirrOfficial - MVP website pembelian otomatis (QRIS) + UI Tailwind + Vercel Functions",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "qrcode": "^1.5.4"
+  }
+}
