@@ -1,0 +1,62 @@
+/* Web HirrOfficial — custom styles (Tailwind utilities loaded via CDN in index.html) */
+
+:root {
+  --glass-bg: rgba(255,255,255,0.72);
+  --glass-border: rgba(0,0,0,0.10);
+  --grid-line: rgba(0,0,0,0.06);
+}
+
+.dark {
+  --glass-bg: rgba(255,255,255,0.06);
+  --glass-border: rgba(255,255,255,0.12);
+  --grid-line: rgba(255,255,255,0.06);
+}
+
+/* Smooth theme transition */
+* {
+  transition: background-color .25s ease, border-color .25s ease, color .25s ease, box-shadow .25s ease, opacity .25s ease, transform .25s ease;
+}
+
+body {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Subtle grid background for the intro */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0.04), rgba(255,255,255,0.12), rgba(255,255,255,0.04));
+  background-size: 200% 100%;
+  animation: shimmer 1.25s infinite linear;
+}
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Better focus outline */
+:focus-visible {
+  outline: 2px solid rgba(99,102,241,0.8);
+  outline-offset: 2px;
+}
+
+/* Hide number input arrows */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+input[type=number] { -moz-appearance: textfield; }
+
+/* Hide scrollbars for horizontal nav */
+.no-scrollbar::-webkit-scrollbar{display:none}
+.no-scrollbar{-ms-overflow-style:none; scrollbar-width:none;}
